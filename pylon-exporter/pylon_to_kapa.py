@@ -36,7 +36,7 @@ def html_to_markdown(html_content: str) -> str:
     return h.strip()
 
 
-def convert_pylon_to_kapa_format(input_file: str, output_dir: str = "kapa_tickets"):
+def convert_pylon_to_kapa_format(input_file: str, output_dir: str = "pylon_tickets"):
     """
     Convert Pylon JSON export to Kapa.ai S3 storage format
 
@@ -263,12 +263,12 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python pylon_to_kapa.py <pylon_json_file> [output_directory]")
         print(
-            "Example: python pylon_to_kapa.py pylon_closed_tickets_20250603_164324.json kapa_tickets"
+            "Example: python pylon_to_kapa.py pylon_closed_tickets_20250603_164324.json pylon_tickets"
         )
         return
 
     input_file = sys.argv[1]
-    output_dir = sys.argv[2] if len(sys.argv) > 2 else "kapa_tickets"
+    output_dir = sys.argv[2] if len(sys.argv) > 2 else "pylon_tickets"
 
     if not os.path.exists(input_file):
         print(f"❌ Error: Input file '{input_file}' not found")
