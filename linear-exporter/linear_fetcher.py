@@ -3,7 +3,9 @@ import requests
 import json
 from datetime import datetime, timedelta, timezone
 from typing import List, Dict, Any, Optional
+from dotenv import load_dotenv
 
+load_dotenv()  # Load environment variables from .env file
 
 class LinearAPIClient:
     def __init__(self, api_key: str):
