@@ -5,6 +5,7 @@ Learn more about getting started with exporting data from platforms that are cur
 ## Exporters
 
 - [Pylon](./pylon-exporter/)
+- [Linear](./linear-exporter/)
 
 ### Disclaimer 
 
